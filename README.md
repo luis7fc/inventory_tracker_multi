@@ -1,2 +1,1 @@
-# inventory_tracker_multi
-# Journal entries for the soup
+# This repository will be used for testing python scripts.
