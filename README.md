@@ -1,1 +1,1 @@
-# This repository will be used for testing python scripts.
+# This repository will be used for personal projects
