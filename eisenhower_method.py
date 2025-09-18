@@ -511,10 +511,16 @@ def render_sidebar() -> None:
         step=15.0,
         value=float(settings["focus_block_minutes"]),
     )
-    settings["session_start"] = st.sidebar.datetime_input(
-        "Session start",
-        value=settings["session_start"],
+    session_start_value = settings["session_start"]
+    session_date = st.sidebar.date_input(
+        "Session date",
+        value=session_start_value.date(),
     )
+    session_time = st.sidebar.time_input(
+        "Session start time",
+        value=session_start_value.time(),
+    )
+    settings["session_start"] = datetime.combine(session_date, session_time)
 
     st.sidebar.divider()
     st.sidebar.subheader("Import / Export")
